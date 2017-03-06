@@ -26,45 +26,45 @@ public class Progressions {
         switch (typeChord){
             case "popular":
                 progs1.add(c);
-                progs1.add(a);
-                progs1.add(d);
+                progs1.add(c);
+                progs1.add(c);
                 progs1.add(g);
                 break;
             case "dark":
-                progs1.add(e);
+                progs1.add(a);
+                progs1.add(a);
                 progs1.add(a);
                 progs1.add(d);
-                progs1.add(b);
                 break;
             case "happy":
                 progs1.add(c);
                 progs1.add(c);
-                progs1.add(f);
-                progs1.add(g);
-                break;
-            case "sad":
-                progs1.add(a);
-                progs1.add(e);
-                progs1.add(d);
-                progs1.add(g);
-                break;
-            case "wow":
-                progs1.add(a);
                 progs1.add(c);
                 progs1.add(f);
+                break;
+            case "sad":
+                progs1.add(f);
+                progs1.add(f);
+                progs1.add(f);
+                progs1.add(a);
+                break;
+            case "wow":
+                progs1.add(d);
+                progs1.add(d);
+                progs1.add(d);
                 progs1.add(g);
                 break;
             case "red":
-                progs1.add(a);
-                progs1.add(c);
-                progs1.add(d);
-                progs1.add(g);
+                progs1.add(e);
+                progs1.add(e);
+                progs1.add(e);
+                progs1.add(f);
                 break;
             case "blue":
                 progs1.add(b);
-                progs1.add(e);
+                progs1.add(b);
+                progs1.add(b);
                 progs1.add(f);
-                progs1.add(g);
                 break;
         }
 
