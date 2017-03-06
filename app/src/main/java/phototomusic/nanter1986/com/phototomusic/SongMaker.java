@@ -82,33 +82,33 @@ public class SongMaker {
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
                 v1,melody,rythm,1,8,1,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,2,4,2,0);
+                v1,melody,rythm,2,0,2,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,2,6,3,0);
+                v1,melody,rythm,2,7,3,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,3,0,4,0);
+                v1,melody,rythm,3,1,4,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,3,8,5,0);
+                v1,melody,rythm,3,6,5,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,0,4,6,0);
+                v1,melody,rythm,0,0,6,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,0,10,7,0);
+                v1,melody,rythm,0,5,7,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,1,1,8,0);
+                v1,melody,rythm,1,0,8,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,1,3,9,0);
+                v1,melody,rythm,1,8,9,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,2,5,10,0);
+                v1,melody,rythm,2,0,10,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
                 v1,melody,rythm,2,7,11,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,3,9,12,0);
+                v1,melody,rythm,3,1,12,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,3,7,13,0);
+                v1,melody,rythm,3,6,13,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,0,5,14,0);
+                v1,melody,rythm,0,0,14,0);
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1,melody,rythm,0,3,15,0);
+                v1,melody,rythm,0,5,15,0);
 
 
         //BRIDGE 1 *********************************************************************************
@@ -117,15 +117,15 @@ public class SongMaker {
         BarAdder.addBridge(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
                 v1, melody,rythm,1,34,17,0);
         BarAdder.addBridge(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1, melody,rythm,2,36,18,0);
+                v1, melody,rythm,2,32,18,0);
         BarAdder.addBridge(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1, melody,rythm,2,38,19,0);
+                v1, melody,rythm,2,35,19,0);
         BarAdder.addBridge(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1, melody,rythm,3,32,20,0);
+                v1, melody,rythm,3,33,20,0);
         BarAdder.addBridge(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1, melody,rythm,3,34,21,0);
+                v1, melody,rythm,3,36,21,0);
         BarAdder.addBridge(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                v1, melody,rythm,0,36,22,0);
+                v1, melody,rythm,0,32,22,0);
         BarAdder.addBridge(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
                 v1, melody,rythm,0,38,23,0);
 
@@ -135,33 +135,33 @@ public class SongMaker {
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
                 c1,melody,rythm,1,26,25,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,2,20,26,0);
+                c1,melody,rythm,2,16,26,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,2,22,27,0);
+                c1,melody,rythm,2,25,27,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,3,26,28,0);
+                c1,melody,rythm,3,17,28,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,3,18,29,0);
+                c1,melody,rythm,3,24,29,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,0,20,30,0);
+                c1,melody,rythm,0,16,30,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,0,21,31,0);
+                c1,melody,rythm,0,23,31,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,1,17,32,0);
+                c1,melody,rythm,1,16,32,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,1,19,33,0);
+                c1,melody,rythm,1,26,33,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,2,21,34,0);
+                c1,melody,rythm,2,16,34,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,2,23,35,0);
+                c1,melody,rythm,2,25,35,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,3,25,36,0);
+                c1,melody,rythm,3,1,36,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,3,23,37,0);
+                c1,melody,rythm,3,24,37,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,0,21,38,0);
+                c1,melody,rythm,0,16,38,0);
         BarAdder.addChorus(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
-                c1,melody,rythm,0,19,39,0);
+                c1,melody,rythm,0,23,39,0);
 
         //VERSE 2 ***********************************************************************************
         BarAdder.addVerse(choosenScale,noteTrack,chordChannel,chordVelocity,bassChannel,bassVelocity,drumsChannel,
