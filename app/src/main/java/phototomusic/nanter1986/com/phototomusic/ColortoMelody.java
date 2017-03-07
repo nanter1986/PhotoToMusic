@@ -29,39 +29,41 @@ public class ColortoMelody {
                     break;
                 case "yellow":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when , duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 1 / 4, duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when , duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 2 / 4, duration / 2);
                     break;
                 case "cyan":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 1 / 4, duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when+ duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "green":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+12) + 12 + transpose, v, when  , duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 1 / 4, duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 1 / 4 , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
                     break;
                 case "red":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when  , duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 1 / 4, duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+3) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "blue":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody,scale.get(newIndex+2) + 12 + transpose, v, when  , duration / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 1 / 8, duration / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 2 / 8, duration* 3/ 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "purple":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when  , duration / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 1 / 8, duration / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 2 / 8, duration* 3/ 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "black":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when, duration);
 
 
                     break;
@@ -70,49 +72,47 @@ public class ColortoMelody {
             switch (colorM) {
                 case "white":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration);
+
                     break;
                 case "yellow":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when , duration *3/ 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 1) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when , duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 2 / 4, duration / 2);
                     break;
                 case "cyan":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration *6/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 2) + 12 + transpose, v, when + duration * 6 / 8, duration *2/ 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when+ duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "green":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 3) + 12 + transpose, v, when + duration * 2 / 4, duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 1 / 4 , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
                     break;
                 case "red":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 3 / 8, duration *1/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 4 / 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 7 / 8, duration *1/ 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+3) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "blue":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 1) + 12 + transpose, v, when + duration * 3 / 4, duration *1/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 4 / 8, duration *3/8 );
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex +1) + 12 + transpose, v, when + duration * 7 / 8, duration *1/ 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "purple":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 3) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 4) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "black":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration*3/4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when+duration*3/4, duration/4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when, duration);
+
 
                     break;
             }
@@ -245,61 +245,64 @@ public class ColortoMelody {
             switch (colorM) {
                 case "white":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when, duration);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when, duration);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration);
 
                     break;
                 case "yellow":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when , duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when , duration / 2);
                     noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 2);
                     noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when , duration / 2);
                     noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 24 + transpose, v, when + duration * 2 / 4, duration / 2);
                     break;
                 case "cyan":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when, duration *3/ 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration *3/ 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 24 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when+ duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when+ duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "green":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when  , duration *3/ 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 3 / 4, duration *1/ 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when  , duration *3/ 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when + duration * 3 / 4, duration *1/ 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 1 / 4 , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+3) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when + duration * 1 / 4 , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
                     break;
                 case "red":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when  , duration *2/ 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-3) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when  , duration *2/ 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+3) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "blue":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when  , duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 3 / 8, duration*3 / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 6 / 8, duration* 2/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when  , duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 3 / 8, duration*3 / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 24 + transpose, v, when + duration * 6 / 8, duration* 2/ 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "purple":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when  , duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 3 / 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 6 / 8, duration* 2/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when  , duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 24 + transpose, v, when + duration * 3 / 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 24 + transpose, v, when + duration * 6 / 8, duration* 2/ 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "black":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when, duration);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when, duration);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when, duration);
 
 
                     break;
@@ -309,82 +312,65 @@ public class ColortoMelody {
             switch (colorM) {
                 case "white":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when, duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-3) + 12 + transpose, v, when + duration * 2 / 4, duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 24 + transpose, v, when + duration * 2 / 4, duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when, duration);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration);
 
                     break;
                 case "yellow":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when, duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration / 2);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex -2) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when , duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 2 / 4, duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when , duration / 2);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 24 + transpose, v, when + duration * 2 / 4, duration / 2);
                     break;
                 case "cyan":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 8, duration *1/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-3) + 12 + transpose, v, when + duration * 4 / 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-4) + 12 + transpose, v, when + duration * 7 / 8, duration *1/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 2) + 24 + transpose, v, when + duration * 3 / 8, duration *1/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex -1) + 24 + transpose, v, when + duration * 4 / 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex -2) + 24 + transpose, v, when + duration * 7 / 8, duration *1/ 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when+ duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when+ duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "green":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when, duration * 3 / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-3) + 12 + transpose, v, when + duration * 3 / 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 6 / 8, duration *2/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration * 3 / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 1) + 24 + transpose, v, when + duration * 3 / 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 24 + transpose, v, when + duration * 6 / 8, duration *2/ 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 1 / 4 , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+3) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when + duration * 1 / 4 , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
                     break;
                 case "red":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when, duration * 3 / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex +1) + 12 + transpose, v, when + duration * 6 / 8, duration / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when + duration * 7 / 8, duration / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration * 3 / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 1) + 24 + transpose, v, when + duration * 6 / 8, duration / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when + duration * 7 / 8, duration / 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+3) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "blue":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex +1) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex -4) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex -1) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 1) + 24 + transpose, v, when + duration * 1 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex -2) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 3) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when  , duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "purple":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 12 + transpose, v, when, duration *6/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 3) + 12 + transpose, v, when + duration * 2 / 4, duration *1/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex ) + 12 + transpose, v, when + duration * 3 / 4, duration *1/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration *6/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 1) + 24 + transpose, v, when + duration * 2 / 4, duration *1/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 2) + 24 + transpose, v, when + duration * 3 / 4, duration *1/ 8);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 12 + transpose, v, when + duration * 3 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when + duration * 1 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when + duration * 2 / 4, duration / 4);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+2) + 24 + transpose, v, when + duration * 3 / 4, duration / 4);
                     break;
                 case "black":
                     newIndex = indexPrevious;
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex-2) + 12 + transpose, v, when, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex + 1) + 12 + transpose, v, when + duration *3/ 8, duration*1 / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex ) + 12 + transpose, v, when + duration *4/ 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 4) + 12 + transpose, v, when + duration *14/ 16, duration *1/ 16);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex ) + 12 + transpose, v, when + duration *15/ 16, duration *1/ 16);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex) + 24 + transpose, v, when, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 1) + 24 + transpose, v, when + duration *3/ 8, duration*1 / 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 2) + 24 + transpose, v, when + duration *4/ 8, duration *3/ 8);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 2) + 24 + transpose, v, when + duration *14/ 16, duration *1/ 16);
-                    noteTrack.insertNote(channelMelody, scale.get(newIndex - 2) + 24 + transpose, v, when + duration *15/ 16, duration *1/ 16);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex-1) + 12 + transpose, v, when, duration);
+                    noteTrack.insertNote(channelMelody, scale.get(newIndex+1) + 24 + transpose, v, when, duration);
+
 
                     break;
             }
