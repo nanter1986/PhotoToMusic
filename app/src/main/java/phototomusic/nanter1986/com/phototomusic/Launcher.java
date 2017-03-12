@@ -11,6 +11,7 @@ public class Launcher extends Activity {
 
     Button chordBased;
     Button melodyBased;
+    Button learning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +20,7 @@ public class Launcher extends Activity {
 
         chordBased=(Button)findViewById(R.id.chordBased);
         melodyBased=(Button)findViewById(R.id.malodyBased);
+        learning=(Button)findViewById(R.id.learning);
         chordBased.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +33,18 @@ public class Launcher extends Activity {
                 goTOMelody();
             }
         });
+        learning.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTOLearning();
+            }
+        });
+    }
+
+    private void goTOLearning() {
+        Intent i=new Intent(this,LearningActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private void goTOMelody() {

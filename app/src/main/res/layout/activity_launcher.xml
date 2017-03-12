@@ -3,21 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="10"
+    android:weightSum="3"
     android:orientation="vertical"
     tools:context="phototomusic.nanter1986.com.phototomusic.Launcher">
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="5"
+        android:layout_height="0"
+        android:layout_weight="1"
         android:text="Chord Based"
         android:id="@+id/chordBased"/>
     <Button
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="5"
+        android:layout_height="0"
+        android:layout_weight="1"
         android:text="Infinite Random Songs"
         android:id="@+id/malodyBased"/>
-m
+
+    <Button
+        android:text="Learning"
+        android:layout_width="match_parent"
+        android:layout_height="0"
+        android:id="@+id/learning"
+        android:layout_weight="1" />
+    m
 </LinearLayout>
