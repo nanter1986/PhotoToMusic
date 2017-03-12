@@ -2,6 +2,8 @@ package phototomusic.nanter1986.com.phototomusic;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,6 +36,10 @@ public class LearningActivity extends Activity {
     TelephonyManager tm;
     CallStateListener csl=new CallStateListener();
 
+    final SharedPreferences sharedPref = this.getSharedPreferences("learning", Context.MODE_PRIVATE);
+    SharedPreferences.Editor editor = sharedPref.edit();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,19 +56,28 @@ public class LearningActivity extends Activity {
         tm.listen(csl,PhoneStateListener.LISTEN_CALL_STATE);
 
         setListeners();
+        makeNextSong();
     }
 
     private void setListeners() {
         happy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(mp!=null){
+                    mp.stop();
+                    mp=null;
+                }
+                makeNextSong();
             }
         });
 
         sad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int highScore = sharedPref.getInt("a", 1);
+                editor.putInt("a", 1);
+                editor.commit();
+
 
             }
         });
@@ -91,9 +106,19 @@ public class LearningActivity extends Activity {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(mp!=null){
+                    mp.stop();
+                    mp=null;
+                }
+                goToLauncher();
             }
         });
+    }
+
+    private void goToLauncher() {
+        Intent i=new Intent(this,Launcher.class);
+        startActivity(i);
+        finish();
     }
 
     public void makeNextSong(){
@@ -103,10 +128,17 @@ public class LearningActivity extends Activity {
         MidiTrack tt=Tempomaker.tempomake(4,4);
         noteTrack.insertEvent(new ProgramChange(0,0, ProgramChange.MidiProgram.ACOUSTIC_GUITAR_NYLON.programNumber()));
 
-        for(int i=0;i<17;i++){
+        noteTrack.insertNote(0, 60 , 120, 0, 200);
+        for(int i=1;i<17;i++){
             Random r=new Random();
-            int pitch=r.nextInt(12)+60;
-            noteTrack.insertNote(0, pitch , 120, i*200, 200);
+            int identifier=r.nextInt(15);
+            int pitch=identifier+60;
+            if(identifier>12){
+
+            }else{
+                noteTrack.insertNote(0, pitch , 120, i*200, 200);
+            }
+
         }
 
         tracks.add(tt);
@@ -124,9 +156,9 @@ public class LearningActivity extends Activity {
         }
 
 
-        mp.setLooping(true);
-        mp=MediaPlayer.create(this, Uri.parse(Environment.getExternalStorageDirectory().getPath().toString()+ "/theMelody.mid"));
 
+        mp=MediaPlayer.create(this, Uri.parse(Environment.getExternalStorageDirectory().getPath().toString()+ "/theMelody.mid"));
+        mp.setLooping(true);
         mp.start();
     }
 
