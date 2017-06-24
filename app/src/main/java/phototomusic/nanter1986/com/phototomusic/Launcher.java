@@ -42,9 +42,9 @@ public class Launcher extends Activity {
     }
 
     private void goTOLearning() {
-        Intent i=new Intent(this,LearningActivity.class);
+        /*Intent i=new Intent(this,LearningActivity.class);
         startActivity(i);
-        finish();
+        finish();*/
     }
 
     private void goTOMelody() {

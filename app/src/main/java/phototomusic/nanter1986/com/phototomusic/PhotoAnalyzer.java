@@ -15,15 +15,15 @@ public class PhotoAnalyzer {
     public static String[] AnalyzePhotoChords(Bitmap b) {
 
         //VERSE ************************************************************************************
-        int chord1 = b.getPixel(25, 12);
-        int chord2 = b.getPixel(25, 37);
-        int chord3 = b.getPixel(25, 62);
-        int chord4 = b.getPixel(25, 87);
+        int chord1 = getAverageColorOfPixelArea(b,0,0);
+        int chord2 = getAverageColorOfPixelArea(b,0,12);
+        int chord3 = getAverageColorOfPixelArea(b,0,24);
+        int chord4 = getAverageColorOfPixelArea(b,0,36);
 
-        int chord5 = b.getPixel(75, 12);
-        int chord6 = b.getPixel(75, 37);
-        int chord7 = b.getPixel(75, 62);
-        int chord8 = b.getPixel(75, 87);
+        int chord5 = getAverageColorOfPixelArea(b,50,48);
+        int chord6 = getAverageColorOfPixelArea(b,50,60);
+        int chord7 = getAverageColorOfPixelArea(b,50,72);
+        int chord8 = getAverageColorOfPixelArea(b,50,84);
 
         String[] chordArray = new String[8];
         chordArray[0]=getStrongColor(chord1);
@@ -78,38 +78,7 @@ public class PhotoAnalyzer {
 
 
         colorWithoutDuplicates=color;
-        /*colorWithoutDuplicates[0]=color[0];
-        for(int i=1;i<8;i++) {
-            if(color[i].equals(color[i-1])){
-                colorWithoutDuplicates[i]="yellow";
-            }else{
-                colorWithoutDuplicates[i]=color[i];
-            }
-        }
-        colorWithoutDuplicates[8]=color[8];
-        for(int i=9;i<16;i++) {
-            if(color[i].equals(color[i-1])){
-                colorWithoutDuplicates[i]="yellow";
-            }else{
-                colorWithoutDuplicates[i]=color[i];
-            }
-        }
-        colorWithoutDuplicates[16]=color[16];
-        for(int i=17;i<24;i++) {
-            if(color[i].equals(color[i-1])){
-                colorWithoutDuplicates[i]="yellow";
-            }else{
-                colorWithoutDuplicates[i]=color[i];
-            }
-        }
-        colorWithoutDuplicates[24]=color[24];
-        for(int i=25;i<32;i++) {
-            if(color[i].equals(color[i-1])){
-                colorWithoutDuplicates[i]="yellow";
-            }else{
-                colorWithoutDuplicates[i]=color[i];
-            }
-        }*/
+
 
         for(int i=0;i<color.length;i++){
             Log.i("dup",color[i] + colorWithoutDuplicates[i]);
@@ -165,5 +134,21 @@ public class PhotoAnalyzer {
         }
 
 
+    }
+
+    public static int getAverageColorOfPixelArea(Bitmap b,int x,int y){
+        Log.i("testofsize",b.getWidth()+" "+b.getHeight());
+        int widthOfPiece=50;
+        int heightOfPiece=12;
+        int totalOfPiece=0;
+        int count=widthOfPiece*heightOfPiece;
+        for(int i=x;i<x+widthOfPiece;i++){
+            for(int j=y;j<y+heightOfPiece;j++){
+                totalOfPiece+=b.getPixel(i,j);
+            }
+        }
+        int average=totalOfPiece/count;
+
+        return average;
     }
 }

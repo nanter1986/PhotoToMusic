@@ -5,10 +5,10 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.icu.text.DateFormat;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
@@ -20,8 +20,9 @@ import android.widget.ImageView;
 import com.leff.midi.MidiTrack;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends Activity {
 
@@ -107,14 +108,15 @@ public class MainActivity extends Activity {
         }
 
         MidiTrack tt=Tempomaker.tempomake(4,4);
-        SongMaker.makeFile("hey",chords,melody,rythm,tt);
+        String nameSong=getDateTime();
+        SongMaker.makeFile(nameSong,chords,melody,rythm,tt);
 
 
 
         tm=(TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
         tm.listen(csl,PhoneStateListener.LISTEN_CALL_STATE);
 
-        mp=MediaPlayer.create(this, Uri.parse(Environment.getExternalStorageDirectory().getPath().toString()+ "/hey.mid"));
+        mp=MediaPlayer.create(this, Uri.parse(Environment.getExternalStorageDirectory().getPath().toString()+"/"+nameSong+".mid"));
 
 
         mp.setLooping(true);
@@ -134,6 +136,14 @@ public class MainActivity extends Activity {
                     }
             }
         }
+    }
+
+    private String getDateTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+        Date date = new Date();
+        Log.i("datee",dateFormat.format(date));
+        return dateFormat.format(date);
+
     }
 
 

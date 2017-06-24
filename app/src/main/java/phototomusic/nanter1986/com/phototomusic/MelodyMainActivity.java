@@ -9,11 +9,14 @@ import android.os.Environment;
 import android.os.Bundle;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import com.leff.midi.MidiTrack;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Random;
 
 import phototomusic.nanter1986.com.phototomusic.bymelody.SongMakerByMelody;
@@ -82,9 +85,10 @@ public class MelodyMainActivity extends Activity {
         }
 
         MidiTrack tt=Tempomaker.tempomake(4,4);
-        SongMaker.makeFile("hey",chords,melody,rythm,tt);
+        String nameSong=getDateTime();
+        SongMaker.makeFile(nameSong,chords,melody,rythm,tt);
 
-        MediaPlayer mp=MediaPlayer.create(this, Uri.parse(Environment.getExternalStorageDirectory().getPath().toString()+ "/hey.mid"));
+        MediaPlayer mp=MediaPlayer.create(this, Uri.parse(Environment.getExternalStorageDirectory().getPath().toString()+"/"+nameSong+".mid"));
 
         mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
@@ -133,5 +137,13 @@ public class MelodyMainActivity extends Activity {
                     finish();
             }
         }
+    }
+
+    private String getDateTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+        Date date = new Date();
+        Log.i("datee",dateFormat.format(date));
+        return dateFormat.format(date);
+
     }
 }
