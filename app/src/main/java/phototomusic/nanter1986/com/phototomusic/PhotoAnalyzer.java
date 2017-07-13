@@ -44,8 +44,7 @@ public class PhotoAnalyzer {
         String[] color=new String[64];
 
         for (int i = 0; i < 64; i++) {
-            pix[i] = b.getPixel(20 + i, 50);
-
+            pix[i]=getAverageColorOfMelodySlice(b,20+i);
         }
 
 
@@ -59,6 +58,16 @@ public class PhotoAnalyzer {
         }
         return color;
 
+    }
+
+    private static int getAverageColorOfMelodySlice(Bitmap b,int x) {
+        int result;
+        int total=0;
+        for(int i=0;i<99;i++){
+            total+=b.getPixel(x,i);
+        }
+        result=total/99;
+        return result;
     }
 
     public static String[] AnalyzePhotoRythm(Bitmap b){
